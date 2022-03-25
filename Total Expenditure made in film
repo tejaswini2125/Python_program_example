@@ -1,0 +1,48 @@
+sum = 0
+sum1=0
+sum2=0
+sum3=0
+sum4=0
+quantity=0
+quantity1=0
+quantity2=0
+quantity3=0
+quantity4=0
+priceBacklog = {
+    "t": 5,
+    "p": 4,
+    "s": 2,
+    "b" : 4.5
+}
+ticket = int(input("Enter number of tickets: "))
+sum1 = ticket * priceBacklog["t"]
+quantity1=ticket
+while True:
+    print("1. popcorn = 4.0rs")
+    print("2. Soda      = 2 rs")
+    print("3. Burger     = 4.5 rs")
+    print("4. Complete")
+
+    choice = int(input('Make a selection: '))
+
+    if choice == 1:
+        amount = int(input("Enter number of popcorn: "))
+        sum2 += amount * priceBacklog["p"]
+        quantity2=amount
+    elif choice == 2:
+        amount = int(input("Enter number of Soda: "))
+        sum3 += amount * priceBacklog["s"]
+        quantity3=amount
+    elif choice == 3:
+        amount = int(input("Enter number of Burger: "))
+        sum4 += amount * priceBacklog["b"]
+        quantity4=amount
+    elif choice == 4:
+        print(f"No of Tickets Buy is {quantity1} and amount ={sum1}")
+        print(f"No of Popcorn Buy is {quantity2} and amount ={sum2}")
+        print(f"No of Soda Buy is {quantity3} and amount ={sum3}")
+        print(f"No of Burger Buy is {quantity4} and amount ={sum4}")
+       
+        sum=sum1+sum2+sum3+sum4
+        print(f"Total amount={sum}")
+        break
